@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const iosLink = "https://apps.apple.com/in/app/oodle-make-friends-bff/id6445989706";
+const androidLink = "https://play.google.com/store/apps/details?id=oodle.social&hl=en_IN";
+---
+
+<BaseLayout title="About Oodle | Genuine Filipino Dating App" description="Oodle is the leading Filipino dating app connecting you with genuine, relationship-oriented women from the Philippines.">
+  
+  <div class="bg-slate-50 pt-20 pb-24 overflow-hidden relative">
+    
+    <!-- Background Accents -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-purple-200 mix-blend-multiply filter blur-[100px] opacity-70 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-blue-200 mix-blend-multiply filter blur-[100px] opacity-70 pointer-events-none"></div>
+
+    <!-- Hero Intro -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 pb-16 relative z-10">
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-slate-900 tracking-tight mb-8">
+        About Oodle
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-600 leading-relaxed font-light">
+        Oodle is one of the leading Filipino dating apps connecting people from all over the world with singles from the Philippines. It’s built for people who are serious about finding something <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">real and lasting</span>.
+      </p>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 relative z-10">
+      <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 sm:p-12 border border-slate-100">
+        
+        <!-- Section: What Oodle Is -->
+        <section class="mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 flex items-center">
+            <span class="w-8 h-1 bg-purple-500 rounded-full mr-4 block"></span>
+            What Oodle Is
+          </h2>
+          <div class="prose prose-lg prose-slate max-w-none text-slate-600 space-y-4">
+            <p>Oodle helps you meet genuine Filipina women who are open to building meaningful relationships with people overseas.</p>
+            <p>If you’re tired of your local dating scene and want something different, Oodle gives you the opportunity to connect with people from a culture known for being warm, kind, and relationship-oriented.</p>
+            <p>Dating in the Philippines is different — people are more caring, more genuine, and more open to building something long-term.</p>
+          </div>
+        </section>
+
+        <!-- Section: Who It's For -->
+        <section class="mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 flex items-center">
+            <span class="w-8 h-1 bg-blue-500 rounded-full mr-4 block"></span>
+            Who It’s For
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 font-medium">Oodle is exclusively built for:</p>
+          <ul class="space-y-4">
+            {[
+              "Men who want to meet women from the Philippines",
+              "People interested in international dating",
+              "Anyone looking for something more meaningful than typical dating apps",
+              "Those who are open to exploring love beyond borders"
+            ].map((item) => (
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-purple-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-lg text-slate-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <!-- Section: Why People Choose Oodle -->
+        <section class="mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 flex items-center">
+            <span class="w-8 h-1 bg-emerald-500 rounded-full mr-4 block"></span>
+            Why People Choose Oodle
+          </h2>
+          <div class="prose prose-lg prose-slate max-w-none text-slate-600 space-y-4 mb-6">
+            <p>Millions of users love Oodle because it feels different.</p>
+          </div>
+          
+          <div class="grid sm:grid-cols-3 gap-4 mb-6">
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+              <div class="text-3xl mb-2">🤝</div>
+              <p class="text-sm font-semibold text-slate-800">Real people actually wanting to connect</p>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+              <div class="text-3xl mb-2">💬</div>
+              <p class="text-sm font-semibold text-slate-800">Conversations that don't die out</p>
+            </div>
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+              <div class="text-3xl mb-2">🌱</div>
+              <p class="text-sm font-semibold text-slate-800">A healthy space to grow</p>
+            </div>
+          </div>
+          
+          <div class="prose prose-lg prose-slate max-w-none text-slate-600 space-y-4">
+            <p>We’ve already helped thousands of people change their lives.</p>
+            <p class="font-semibold text-slate-800 bg-purple-50 p-4 rounded-xl border border-purple-100">Over a thousand couples have taken the next step — building real relationships and even getting married after meeting on Oodle.</p>
+          </div>
+        </section>
+
+        <!-- Section: Our Mission -->
+        <section class="mb-14">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 flex items-center">
+            <span class="w-8 h-1 bg-rose-500 rounded-full mr-4 block"></span>
+            Our Mission
+          </h2>
+          <div class="prose prose-lg prose-slate max-w-none text-slate-600 space-y-4">
+            <p>We believe finding the right person can change your life.</p>
+            <p>Our mission is to make it easier for people around the world to connect, build meaningful relationships, and find something real — no matter where they are.</p>
+          </div>
+        </section>
+
+        <!-- Divider -->
+        <hr class="border-slate-200 my-12" />
+
+        <!-- Closing / CTA -->
+        <section class="text-center">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">Ready to experience something different?</h2>
+          <p class="text-lg text-slate-600 mb-8">Oodle is here. Start your journey today and see where it takes you.</p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={iosLink} class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-105 hover:shadow-xl hover:shadow-purple-200 transition-all duration-300">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 14c.08-.02.4-1.28 1.54-1.88-1.02-1.78-2.61-1.99-3.23-2.02-1.42-.14-2.76.84-3.51.84-.73 0-1.84-.82-2.99-.8-1.51.02-2.91.88-3.69 2.22-1.57 2.73-.4 6.78 1.13 8.98.74 1.08 1.62 2.27 2.8 2.23 1.13-.04 1.56-.73 2.92-.73s1.76.73 2.94.7c1.22-.02 1.98-1.08 2.72-2.15.86-1.25 1.22-2.45 1.23-2.52-.03-.01-2.35-.9-1.86-4.87zM14.74 7.64c.64-.78 1.07-1.85.95-2.94-1.02.04-2.19.68-2.85 1.46-.58.69-1.09 1.78-.95 2.85 1.13.09 2.21-.59 2.85-1.37z" /></svg>
+              iPhone App
+            </a>
+            <a href={androidLink} class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 border-2 border-slate-200 text-lg font-bold rounded-full text-slate-700 bg-white hover:border-purple-300 hover:bg-purple-50 hover:scale-105 transition-all duration-300">
+              <svg class="w-6 h-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997 0-.5516.4482-1.0002.9993-1.0002.5511 0 .9997.4486.9997 1.0002 0 .5511-.4481.9997-.9997.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997 0-.5516.4482-1.0002.9993-1.0002.5511 0 .9997.4486.9997 1.0002 0 .5511-.4486.9997-.9997.9997m11.4045-6.02L19.18 6.0697a.499.499 0 10-.8637-.5024l-1.3503 3.3242c-1.4013-.6423-2.9997-1.0006-4.6644-1.0006-1.6642 0-3.2636.3583-4.665.1l-1.3498-3.3242a.4988.4988 0 10-.8637.5024l1.2985 3.2517C3.1352 10.3957 0 14.8573 0 20.3015h24c0-5.4442-3.1348-9.9058-6.1185-10.98z"/></svg>
+              Android App
+            </a>
+          </div>
+          <p class="text-sm font-semibold text-slate-400 mt-4">Download the app and begin.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</BaseLayout>
