@@ -40,7 +40,13 @@ const androidLink = "https://play.google.com/store/apps/details?id=oodle.social&
 
             <!-- Desktop View: QR Code Below Buttons -->
             <div class="hidden md:flex items-center gap-6 mt-8 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 max-w-md ring-1 ring-slate-100/50 hover:shadow-md transition-shadow">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://oodle.dating/download" alt="QR Code to install Oodle" class="w-20 h-20 rounded-lg shadow-sm" />
+              <img id="qrCode" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="QR Code to install Oodle" class="w-20 h-20 rounded-lg shadow-sm" />
+              <script is:inline>
+                document.addEventListener('DOMContentLoaded', () => {
+                  const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(window.location.origin + "/download");
+                  document.getElementById('qrCode').src = qrUrl;
+                });
+              </script>
               <div>
                 <h3 class="font-bold text-slate-800 text-base mb-1">Scan to Download</h3>
                 <p class="text-sm text-slate-500 leading-relaxed text-left">Point your phone's camera at this code to get the app.</p>
