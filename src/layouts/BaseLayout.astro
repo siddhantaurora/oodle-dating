@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import Schema from '../components/Schema.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  schemaType?: string;
+  schemaData?: any;
+}
+
+const { title, description, canonicalURL, schemaType = 'WebSite', schemaData = { name: "oodle.dating", url: "https://oodle.dating" } } = Astro.props;
+const siteUrl = Astro.site?.toString() || 'https://oodle.dating/';
+const canonUrl = canonicalURL || new URL(Astro.url.pathname, siteUrl).toString();
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/app-icon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonUrl} />
+    <Schema type={schemaType} data={schemaData} />
+	</head>
+	<body class="bg-white text-slate-900 font-sans antialiased min-h-screen flex flex-col selection:bg-purple-200 selection:text-purple-900">
+    <Header />
+    <main class="flex-grow flex flex-col">
+		  <slot />
+    </main>
+    <Footer />
+	</body>
+</html>

@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout 
+  title={frontmatter.title} 
+  description={frontmatter.description} 
+  canonicalURL={frontmatter.canonicalURL}
+  schemaType="Article"
+  schemaData={{
+    headline: frontmatter.title,
+    datePublished: frontmatter.pubDate,
+    author: {
+      "@type": "Person",
+      name: frontmatter.author || "oodle.dating Team"
+    }
+  }}
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-lg prose-pink">
+    <h1>{frontmatter.title}</h1>
+    {frontmatter.pubDate && <p class="text-sm text-gray-500">Published on {new Date(frontmatter.pubDate).toLocaleDateString()}</p>}
+    <slot />
+  </article>
+</BaseLayout>

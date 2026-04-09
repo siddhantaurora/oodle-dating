@@ -1,0 +1,3 @@
+# oodle.dating
+
+This is the public website for oodle.dating. We provide resources, guides, and comparison tables for our dating app.
